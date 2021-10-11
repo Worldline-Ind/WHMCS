@@ -1,5 +1,6 @@
 <?php
 require_once 'includes/gatewayfunctions.php';
+
 use WHMCS\ClientArea;
 use WHMCS\Database\Capsule;
 
@@ -12,12 +13,12 @@ $ca = new ClientArea();
 
 $ca->setPageTitle('Offline Verification');
 $ca->initPage();
-$datapg = getGatewayVariables('ingenico');
+$datapg = getGatewayVariables('worldline');
 
 # Define the template filename to be used without the .tpl extension
-$data =array();
+$data = array();
 $data['merchantCode'] = $datapg['merchantCode'];
-$data['url'] = $CONFIG['SystemURL'].'/reconciliation.php';
+$data['url'] = $CONFIG['SystemURL'] . '/reconciliation.php';
 $ca->assign('data', $data);
 $ca->setTemplate('offlineverification');
 $ca->output();
