@@ -84,7 +84,7 @@ function worldline_config()
         // defined here for backwards compatibility
         'FriendlyName' => array(
             'Type' => 'System',
-            'Value' => 'Worldline',
+            'Value' => 'Cards / UPI / Netbanking / Wallets',
         ),
         'description' => array(
             'FriendlyName' => 'Description',
